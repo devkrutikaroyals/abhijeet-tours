@@ -1,0 +1,104 @@
+/* Fixed & Smaller Header */
+header {
+  background-color:#e5dcb8;
+  position: fixed;
+  height:86px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 8px 0; /* Reduced Header Height */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Flexbox for Header Layout */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Logo Container (Left Side) */
+.logo-container {
+  flex: 0.3; /* Adjust width for left alignment */
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image{
+  height: 134px;
+  width: auto;
+  margin-top: -26px;
+  margin-left: -152px;
+}
+/* Navigation Container (Right Side) */
+.nav-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin-top: -20px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgb(8, 8, 8);
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffcc00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-container {
+    flex: 1;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #003366;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}

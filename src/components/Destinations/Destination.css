@@ -1,0 +1,15 @@
+.destination-container {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .destination-container h1 {
+    font-size: 36px;
+    color: #003366;
+  }
+  
+  .destination-container p {
+    font-size: 18px;
+    color: #666;
+  }
+  

@@ -1,0 +1,41 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import "../Header/Header.css"; // Import the CSS file
+import logo from "../../images/logo (1).png";
+
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <header>
+      <div className="header-container">
+        {/* Logo Container (Left Side) */}
+        <div className="logo-container">
+          <Link to="/" className="logo">
+            <img src={logo} alt="Abhijeet Tour & Travels Logo" className="logo-image" />
+          </Link>
+        </div>
+
+        {/* Navigation Container (Right Side) */}
+        <div className="nav-container">
+          <div className="menu-icon" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </div>
+
+          <ul className={`nav-links ${isOpen ? "open" : ""}`}>
+            <li><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
+            <li><Link to="/services" onClick={() => setIsOpen(false)}>Services</Link></li>
+            <li><Link to="/destination" onClick={() => setIsOpen(false)}>Destination</Link></li>
+            <li><Link to="/taxi-rent" onClick={() => setIsOpen(false)}>Taxi Rent</Link></li>
+            <li><Link to="/route" onClick={() => setIsOpen(false)}>Route</Link></li>
+            <li><Link to="/about" onClick={() => setIsOpen(false)}>About</Link></li>
+            <li><Link to="/contact" onClick={() => setIsOpen(false)}>Contact Us</Link></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Header;
