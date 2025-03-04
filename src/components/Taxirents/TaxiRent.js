@@ -1,12 +1,82 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "./TaxiRent.css";
+import sedan from "../images/bg17.jpg";
+import suv from "../images/bg18.jpg";
+import premium from "../images/Ertiga.jpg";
+import minivan from "../images/bg19.jpg";
 
-const TaxiRent = () => {
+const TaxiFares = () => {
+  useEffect(() => {
+    AOS.init({ duration: 700, easing: "ease-in-out" });
+  }, []);
+
+  const callNumber = "9876543210"; // Replace with the actual phone number
+
+  const cars = [
+    {
+      title: "Sedan Cabs",
+      image: sedan,
+      models: "Toyota Etos, Dzire, Hyundai Xcent or Similar",
+      ac: "2 Bags",
+      capacity: "4 Passenger",
+      limit: "250Km | 12 Hrs",
+      animation: "fade-right",
+    },
+    {
+      title: "SUV Cabs",
+      image: suv,
+      models: "Mahindra Marazzo, Ertiga, Mahindra Xylo",
+      ac: "5 Bags",
+      capacity: "6 Passenger",
+      limit: "300Km | 12 Hrs",
+      animation: "fade-up",
+    },
+    {
+      title: "SUV Premium Cabs",
+      image: premium,
+      models: "Toyota Innova or Innova Crysta or Similar",
+      ac: "5 Bags",
+      capacity: "6 Passenger",
+      limit: "300Km | 12 Hrs",
+      animation: "fade-left",
+    },
+    {
+      title: "Minivan Cabs",
+      image: minivan,
+      models: "Tempo Traveller or Similar",
+      ac: "6 Bags",
+      capacity: "10 Passenger",
+      limit: "400Km | 12 Hrs",
+      animation: "zoom-in",
+    },
+  ];
+
   return (
-    <div>
-      <h1>Taxi Rent</h1>
-      <p>Affordable taxi rental options available.</p>
+    <div className="taxi-fares">
+      <h1 className="page-title" data-aos="fade-down">🚖 Taxi Rent 🚖</h1>
+      <div className="cards-container">
+        {cars.map((car, index) => (
+          <div key={index} className="taxi-card" data-aos={car.animation}>
+            <div className="card-content">
+              <img src={car.image} alt={car.title} className="car-image" />
+              <h3>{car.title}</h3>
+              <p><strong>{car.models}</strong></p>
+              <p>AC: <strong>{car.ac}</strong></p>
+              <p>Capacity: <strong>{car.capacity}</strong></p>
+              <p>Limit: <strong>{car.limit}</strong></p>
+              <p className="fare-note">(Price Excluded Toll-Tax & Parking)</p>
+
+              {/* Call Redirect Button */}
+              <a href={`tel:${callNumber}`} className="book-taxi-btn">Book Taxi</a>
+
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
-export default TaxiRent;
+export default TaxiFares;

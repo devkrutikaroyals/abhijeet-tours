@@ -1,48 +1,73 @@
 import React from "react";
-import "./Service.css"; // Import the CSS file
+import "./Service.css";
+import { FaCarSide, FaStar, FaPlane, FaBusinessTime, FaUserTie, FaGift } from "react-icons/fa";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-const Services = () => {
-  const services = [
-    {
-      title: "City Taxi",
-      description: "Quick and reliable taxi service within Nagpur city.",
-      image: "https://via.placeholder.com/300",
-    },
-    {
-      title: "Outstation Rides",
-      description: "Book affordable outstation rides from Nagpur to nearby locations.",
-      image: "https://via.placeholder.com/300",
-    },
-    {
-      title: "Luxury Cars",
-      description: "Experience comfort and luxury with our premium car rental service.",
-      image: "https://via.placeholder.com/300",
-    },
-    {
-      title: "Airport Pickup & Drop",
-      description: "Hassle-free airport taxi service with on-time pickup and drop.",
-      image: "https://via.placeholder.com/300",
-    },
-  ];
-
+const Service = () => {
   return (
-    <div className="services-container">
-      <h1 className="services-title">Our Services</h1>
-      <p className="services-description">
-        Check out our amazing taxi services.
-      </p>
+    <div>
+      {/* Hero Section */}
+      <div className="hero-section d-flex align-items-center justify-content-center">
+        <div className="hero-overlay text-center text-white">
+          <h1>Premium Cab Services in Nagpur</h1>
+          <p>From luxury to daily rides – we have it all!</p>
+          <button className="btn btn-warning btn-lg">Explore Services</button>
+        </div>
+      </div>
 
-      <div className="services-grid">
-        {services.map((service, index) => (
-          <div key={index} className="service-card">
-            <img src={service.image} alt={service.title} className="service-image" />
-            <h2 className="service-title">{service.title}</h2>
-            <p className="service-text">{service.description}</p>
+      {/* Car Services Section */}
+      <div className="container services-section text-center mt-5">
+        <h2 className="mb-4">Our Car Services</h2>
+        <div className="row">
+          <div className="col-md-4">
+            <div className="service-card p-4">
+              <FaGift className="icon fs-1" />
+              <h4>Wedding Car Service</h4>
+              <p>Make your special day grand with our luxurious wedding cars.</p>
+            </div>
           </div>
-        ))}
+          <div className="col-md-4">
+            <div className="service-card p-4">
+              <FaStar className="icon fs-1" />
+              <h4>Luxury Car Rentals</h4>
+              <p>Experience top-class rides in premium vehicles.</p>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div className="service-card p-4">
+              <FaPlane className="icon fs-1" />
+              <h4>Airport Transfers</h4>
+              <p>Reliable and punctual rides to and from the airport.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="row mt-4">
+          <div className="col-md-4">
+            <div className="service-card p-4">
+              <FaBusinessTime className="icon fs-1" />
+              <h4>Corporate Travel</h4>
+              <p>Professional chauffeur service for business executives.</p>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div className="service-card p-4">
+              <FaUserTie className="icon fs-1" />
+              <h4>Chauffeur Services</h4>
+              <p>Elite drivers for a smooth and comfortable ride.</p>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div className="service-card p-4">
+              <FaCarSide className="icon fs-1" />
+              <h4>Daily City Rides</h4>
+              <p>Affordable and convenient transport for everyday needs.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Services;
+export default Service;

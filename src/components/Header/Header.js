@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import "../Header/Header.css"; // Import the CSS file
-import logo from "../../images/logo (1).png";
+import logo from "../images/logo (1).png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,8 +28,8 @@ const Header = () => {
             <li><Link to="/services" onClick={() => setIsOpen(false)}>Services</Link></li>
             <li><Link to="/destination" onClick={() => setIsOpen(false)}>Destination</Link></li>
             <li><Link to="/taxi-rent" onClick={() => setIsOpen(false)}>Taxi Rent</Link></li>
-            <li><Link to="/route" onClick={() => setIsOpen(false)}>Route</Link></li>
-            <li><Link to="/about" onClick={() => setIsOpen(false)}>About</Link></li>
+            <li><Link to="/our-route" onClick={() => setIsOpen(false)}>Route</Link></li>
+            <li><Link to="/about" onClick={() => setIsOpen(false)}>About Us</Link></li>
             <li><Link to="/contact" onClick={() => setIsOpen(false)}>Contact Us</Link></li>
           </ul>
         </div>

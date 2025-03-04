@@ -1,0 +1,75 @@
+.route-page {
+    text-align: center;
+    padding: 30px;
+}
+
+.route-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #000; /* Ensuring the heading is visible */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 79px;
+}
+
+/* Grid layout for route cards */
+.route-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 cards per row */
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Styling for individual route cards */
+.route-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 280px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.route-card:hover {
+    transform: scale(1.05);
+}
+
+/* Image styling inside cards */
+.route-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Card heading */
+.route-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333; /* Ensuring text is visible */
+}
+
+/* Card description */
+.route-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Button styling */
+.view-more-button {
+    background-color: #220b94;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.view-more-button:hover {
+    background-color: #1a086e;
+}

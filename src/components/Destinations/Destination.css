@@ -1,15 +1,90 @@
+
+.destination-page {
+  text-align: center;
+  padding: 50px;
+  background: linear-gradient(to right, #616349, #da9a56);
+  color: white;
+  font-family: "Arial", sans-serif;
+}
+
+.destination-page h1 {
+  font-size: 2.8rem;
+  color: black;
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+
+.destination-page p {
+  font-size: 1.3rem;
+  margin-bottom: 35px;
+  color: black;
+}
+
+/* Updated Card Layout */
 .destination-container {
-    padding: 50px 20px;
-    text-align: center;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+.destination-card {
+  background: #fff9c4; /* Light Yellow */
+  color: #333;
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+}
+
+.destination-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.destination-card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.destination-card h3 {
+  font-size: 1.6rem;
+  margin: 15px 0 10px;
+}
+
+.destination-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.book-now {
+  background: #ff9800;
+  color: white;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.book-now:hover {
+  background: #e68900;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .destination-container {
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  
-  .destination-container h1 {
-    font-size: 36px;
-    color: #003366;
-  }
-  
-  .destination-container p {
-    font-size: 18px;
-    color: #666;
-  }
-  
+}

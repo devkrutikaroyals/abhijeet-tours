@@ -1,6 +1,6 @@
 /* Fixed & Smaller Header */
 header {
-  background-color:#e5dcb8;
+  background-color:#d5c679;
   position: fixed;
   height:86px;
   top: 0;
@@ -72,7 +72,7 @@ header {
 }
 
 .nav-links a:hover {
-  color: #ffcc00;
+  color: #0084ff;
 }
 
 /* Responsive Design */
