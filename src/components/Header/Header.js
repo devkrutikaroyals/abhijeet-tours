@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import "../Header/Header.css"; // Import the CSS file
+import "../Header/Header.css";
 import logo from "../images/logo (1).png";
 
 const Header = () => {
@@ -17,13 +17,14 @@ const Header = () => {
           </Link>
         </div>
 
-        {/* Navigation Container (Right Side) */}
-        <div className="nav-container">
-          <div className="menu-icon" onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </div>
+        {/* Hamburger Menu for Mobile */}
+        <div className="menu-icon" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </div>
 
-          <ul className={`nav-links ${isOpen ? "open" : ""}`}>
+        {/* Navigation Links */}
+        <nav className={`nav-container ${isOpen ? "open" : ""}`}>
+          <ul className="nav-links">
             <li><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
             <li><Link to="/services" onClick={() => setIsOpen(false)}>Services</Link></li>
             <li><Link to="/destination" onClick={() => setIsOpen(false)}>Destination</Link></li>
@@ -32,7 +33,7 @@ const Header = () => {
             <li><Link to="/about" onClick={() => setIsOpen(false)}>About Us</Link></li>
             <li><Link to="/contact" onClick={() => setIsOpen(false)}>Contact Us</Link></li>
           </ul>
-        </div>
+        </nav>
       </div>
     </header>
   );

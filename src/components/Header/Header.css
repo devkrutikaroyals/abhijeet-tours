@@ -1,63 +1,43 @@
-/* Fixed & Smaller Header */
+/* Fixed & Responsive Header */
 header {
-  background-color:#d5c679;
-  position: fixed;
-  height:86px;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  padding: 8px 0; /* Reduced Header Height */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  height: 80px; /* Keep the header height fixed */
+  padding: 10px 0;
+  background-color: #dacc8e;
 }
 
-/* Flexbox for Header Layout */
+/* Header Container */
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
-/* Logo Container (Left Side) */
+/* Logo */
 .logo-container {
-  flex: 0.3; /* Adjust width for left alignment */
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo-image{
-  height: 134px;
+.logo-image {
+  height: 120px; /* Increase the logo size */
   width: auto;
-  margin-top: -26px;
-  margin-left: -152px;
+  /* max-height: 100px; */
+  margin-top: -25px;
 }
-/* Navigation Container (Right Side) */
+
+/* Navigation */
 .nav-container {
-  flex: 1;
   display: flex;
-  justify-content: flex-end;
 }
 
-.menu-icon {
-  display: none;
-  cursor: pointer;
-  font-size: 24px;
-}
-
-/* Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 30px;
-  margin-top: -20px;
+  gap: 25px;
 }
 
 .nav-links li {
@@ -67,7 +47,7 @@ header {
 .nav-links a {
   text-decoration: none;
   color: rgb(8, 8, 8);
-  font-size: 20px;
+  font-size: 18px;
   transition: color 0.3s;
 }
 
@@ -75,27 +55,43 @@ header {
   color: #0084ff;
 }
 
+/* Mobile Menu Icon */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+  /* Hide desktop nav */
   .nav-container {
-    flex: 1;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    /* background: #003366; */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  /* Show nav when menu is open */
+  .nav-container.open {
+    display: flex;
   }
 
   .nav-links {
-    display: none;
     flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background: #003366;
-    width: 100%;
-    text-align: center;
-    padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    gap: 15px;
   }
 
-  .nav-links.open {
-    display: flex;
+  .nav-links a {
+    color: white;
+    font-size: 20px;
+    padding: 10px 0;
+    display: block;
   }
 
   .menu-icon {

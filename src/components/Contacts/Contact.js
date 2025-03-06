@@ -32,21 +32,25 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Contact Form with Floating Input Fields */}
-      <div className="contact-form">
-        <h2>Send us a Message</h2>
-        <form>
-          <div className="input-box">
-            <FaUser className="input-icon" />
-            <input type="text" placeholder="Your Name" required />
-          </div>
-          <div className="input-box">
-            <FaEnvelope className="input-icon" />
-            <input type="email" placeholder="Your Email" required />
-          </div>
-          <textarea placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
+      {/* Form and Map Side by Side */}
+      <div className="form-map-container">
+        {/* Contact Form */}
+        <div className="contact-form">
+          <h2>Send us a Message</h2>
+          <form>
+            <div className="input-box">
+              <FaUser className="input-icon" />
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div className="input-box">
+              <FaEnvelope className="input-icon" />
+              <input type="email" placeholder="Your Email" required />
+            </div>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+
       </div>
 
       {/* Quick Contact Options */}
@@ -57,16 +61,6 @@ const Contact = () => {
         <a href="tel:+918097539306" className="call">
           <FaPhone /> Call Now
         </a>
-      </div>
-
-      {/* Google Map Embed */}
-      <div className="map-container">
-        <iframe
-          title="Our Location"
-          src="https://www.google.com/maps/embed?...your-location..."
-          allowFullScreen
-          loading="lazy"
-        ></iframe>
       </div>
     </div>
   );

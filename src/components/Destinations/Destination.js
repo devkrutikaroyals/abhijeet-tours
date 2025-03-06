@@ -8,26 +8,31 @@ import PuneImage from "../images/pune.jpg";
 import GoaImage from "../images/goa.jpg";
 import NagpurImage from "../images/nagpur.jpg";
 
+// Destination data
 const destinations = [
   {
     name: "Mumbai",
     image: MumbaiImage,
-    description: "Explore the city of dreams with comfort and ease."
+    description: "Explore the city of dreams with comfort and ease.",
+    phone: "+91 8097539306" // Replace with your contact number
   },
   {
     name: "Pune",
     image: PuneImage,
-    description: "Book a cab for a seamless journey to Pune."
+    description: "Book a cab for a seamless journey to Pune.",
+    phone: "+91 8097539306"
   },
   {
     name: "Goa",
     image: GoaImage,
-    description: "Relax on the beaches of Goa with our premium service."
+    description: "Relax on the beaches of Goa with our premium service.",
+    phone: "+91 8097539306"
   },
   {
     name: "Nagpur",
     image: NagpurImage,
-    description: "Discover the orange city with our reliable cabs."
+    description: "Discover the orange city with our reliable cabs.",
+    phone: "+91 8097539306"
   }
 ];
 
@@ -39,7 +44,6 @@ const Destination = () => {
   return (
     <div className="destination-page">
       <h1 data-aos="fade-down">Popular Destinations</h1>
-      <p data-aos="fade-up">Book your ride to these top destinations now!</p>
 
       <div className="destination-container">
         {destinations.map((place, index) => (
@@ -47,7 +51,10 @@ const Destination = () => {
             <img src={place.image} alt={place.name} />
             <h3>{place.name}</h3>
             <p>{place.description}</p>
-            <button className="book-now">Book Now</button>
+            {/* Call button */}
+            <a href={`tel:${place.phone}`} className="book-now">
+              Book Now
+            </a>
           </div>
         ))}
       </div>

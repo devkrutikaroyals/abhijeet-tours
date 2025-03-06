@@ -1,11 +1,17 @@
 import React from "react";
+import { useInView } from "react-intersection-observer";
 import "./Service.css";
 import { FaCarSide, FaStar, FaPlane, FaBusinessTime, FaUserTie, FaGift } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Service = () => {
+  const { ref: serviceRef, inView: isServiceVisible } = useInView({
+    triggerOnce: true,
+    threshold: 0.2, // Trigger when 20% is visible
+  });
+
   return (
-    <div>
+    <div ref={serviceRef} className={`service-page ${isServiceVisible ? "visible" : ""}`}>
       {/* Hero Section */}
       <div className="hero-section d-flex align-items-center justify-content-center">
         <div className="hero-overlay text-center text-white">

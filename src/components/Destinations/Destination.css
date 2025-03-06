@@ -11,14 +11,10 @@
   font-size: 2.8rem;
   color: black;
   margin-bottom: 10px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
-.destination-page p {
-  font-size: 1.3rem;
-  margin-bottom: 35px;
-  color: black;
-}
+
 
 /* Updated Card Layout */
 .destination-container {
@@ -66,15 +62,20 @@
 }
 
 .book-now {
-  background: #ff9800;
+  display: inline-block;
+  background-color: #ff5733;
   color: white;
   padding: 10px 15px;
-  font-size: 1rem;
+  border-radius: 5px;
+  text-decoration: none; /* Removes underline */
   font-weight: bold;
+  transition: background 0.3s ease;
   border: none;
-  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s;
+}
+
+.book-now:hover {
+  background-color: #d9431f;
 }
 
 .book-now:hover {
