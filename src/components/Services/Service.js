@@ -17,7 +17,6 @@ const Service = () => {
         <div className="hero-overlay text-center text-white">
           <h1>Premium Cab Services in Nagpur</h1>
           <p>From luxury to daily rides – we have it all!</p>
-          <button className="btn btn-warning btn-lg">Explore Services</button>
         </div>
       </div>
 

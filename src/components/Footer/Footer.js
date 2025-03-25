@@ -32,9 +32,9 @@ const Footer = () => {
 
         <div className="footer-section contact">
           <h3>Contact Us</h3>
-          <p><FaMapMarkerAlt /> 123 Cab Street, City, Country</p>
-          <p><FaPhone /> +123 456 7890</p>
-          <p><FaEnvelope /> support@cabservice.com</p>
+          <p><FaMapMarkerAlt /> Flat No. 201, Second Floor, Status Enclave, Above HDFC Bank, Ayachit Mandir, Mahal,Nagpur -440 032</p>
+          <p><FaPhone /> +91 8097539306</p>
+          <p><FaEnvelope /> abhijeetpaunikar8@gmail.com</p>
         </div>
 
         <div className="footer-section social">
@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; 2025 Cab Service | All Rights Reserved</p>
+        <p>Royals Webtech Pvt.Ltd . All Rights Reserved</p>
       </div>
     </footer>
   );

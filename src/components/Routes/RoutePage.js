@@ -9,11 +9,12 @@ function RoutePage() {
     { id: 3, name: 'Nagpur to Ramtek' },
     { id: 4, name: 'Nagpur to Chhindwara' },
     { id: 5, name: 'Top 5 Jungle Safari near Nagpur' },
-    { id: 6, name: 'Nagpur to Pachmarhi' },
-    { id: 7, name: 'Nagpur to Jungle Safari' },
-    { id: 8, name: 'Nagpur to Shegaon' },
-    { id: 9, name: 'Top 5 Best Hill Stations near Nagpur' },
-    { id: 10, name: 'Top 5 Temples in Nagpur' },
+    { id: 6, name: 'Nagpur - Shegaon' },
+    { id: 7, name: 'Nagpur - Pune' },
+    { id: 8, name: 'Nagpur - Aurangabad' },
+    { id: 9, name: 'Nagpur - Astavinayak' },
+    { id: 10, name: 'Nagpur - Shanisingapur' }
+   
   ];
 
   return (

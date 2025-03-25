@@ -1,6 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import './RouteDetails.css';
+
+// Importing existing images
 import ZeroMiles from '../images/zero-milestone.jpg';
 import GaneshTekdi from '../images/ganeshtekdi.jpg';
 import FutlaLake from '../images/Futla.jpg';
@@ -21,6 +23,12 @@ import adasa from '../images/adasa.jpg';
 import jamsavli from '../images/jamsavli.jpg';
 import chhindwara from '../images/chhindwara.jpg';
 import pachmahri from '../images/pachmarhi.jpg';
+import shegaon from '../images/Anand.jpg';
+import pune from '../images/ramdham.jpg';
+import aurangabad from '../images/Ajanta.jpg';
+import astavinayak from '../images/ashtavinayak.jpg';
+import shanisingapur from '../images/Shani.jpg';
+
 
 function RouteDetails() {
   const { id } = useParams();
@@ -41,11 +49,11 @@ function RouteDetails() {
     2: {
       name: 'Nagpur to Shirdi',
       cards: [
-        { name: 'Card 1 for Shirdi', imageUrl: 'https://via.placeholder.com/150' },
-        { name: 'Card 2 for Shirdi', imageUrl: 'https://via.placeholder.com/150' },
-        { name: 'Card 3 for Shirdi', imageUrl: 'https://via.placeholder.com/150' },
-        { name: 'Card 4 for Shirdi', imageUrl: 'https://via.placeholder.com/150' },
-        { name: 'Card 5 for Shirdi', imageUrl: 'https://via.placeholder.com/150' },
+        { name: 'Sai Baba Temple', imageUrl: 'https://via.placeholder.com/150' },
+        { name: 'Dwarkamai', imageUrl: 'https://via.placeholder.com/150' },
+        { name: 'Shani Shingnapur', imageUrl: 'https://via.placeholder.com/150' },
+        { name: 'Sai Heritage Village', imageUrl: 'https://via.placeholder.com/150' },
+        { name: 'Khandoba Temple', imageUrl: 'https://via.placeholder.com/150' },
       ],
     },
     3: {
@@ -77,6 +85,40 @@ function RouteDetails() {
         { name: 'Kanha Jungle Safari', imageUrl: kanha },
       ],
     },
+    6: {
+      name: 'Nagpur to Shegaon',
+      cards: [
+        { name: 'Gajanan Maharaj Temple', imageUrl: shegaon },
+        
+      ],
+    },
+    7: {
+      name: 'Nagpur to Pune',
+      cards: [
+        { name: 'Shaniwar Wada', imageUrl: pune },
+     
+      ],
+    },
+    8: {
+      name: 'Nagpur to Aurangabad',
+      cards: [
+        { name: 'Ajanta Caves', imageUrl: aurangabad },
+      ]
+    },
+    9: {
+      name: 'Nagpur to Astavinayak',
+      cards: [
+        { name: 'Mayureshwar Temple', imageUrl: astavinayak },
+       
+      ],
+    },
+    10: {
+      name: 'Nagpur to shanisingapur ',
+      cards: [
+        { name: 'Shani Temple', imageUrl: shanisingapur },
+        
+      ],
+    },
   };
 
   const route = routeDetails[routeId];
@@ -88,7 +130,6 @@ function RouteDetails() {
   return (
     <div className="route-details">
       <h1>{route.name}</h1>
-      
       <div className="route-cards">
         {route.cards.map((card, index) => (
           <div key={index} className="route-card">

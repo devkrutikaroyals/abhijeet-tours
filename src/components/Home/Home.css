@@ -36,14 +36,14 @@
 .hero-title {
   font-size: 3rem;
   font-weight: bold;
-  margin-right: 800px;
+  margin-right: 100px;
   margin-top: -170px;
 }
 
 .hero-text {
   font-size: 1.2rem;
   margin-bottom: 20px;
-  margin-right: 800px;
+  margin-right: 100px;
 }
 
 .learn-more {
@@ -55,7 +55,7 @@
   border: 2px solid yellow;
   border-radius: 5px;
   transition: 0.3s;
-  margin-right: 800px;
+  margin-right: 100px;
 }
 
 .learn-more:hover {

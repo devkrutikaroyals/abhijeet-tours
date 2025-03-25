@@ -10,7 +10,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1460px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -47,12 +47,12 @@ header {
 .nav-links a {
   text-decoration: none;
   color: rgb(8, 8, 8);
-  font-size: 18px;
+  font-size: 20px;
   transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: #0084ff;
+  color: #0033ff;
 }
 
 /* Mobile Menu Icon */

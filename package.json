@@ -10,6 +10,7 @@
     "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
     "dom": "^0.0.3",
+    "framer-motion": "^12.4.10",
     "icons": "^1.0.0",
     "lucide-react": "^0.476.0",
     "react": "^19.0.0",
