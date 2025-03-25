@@ -28,7 +28,7 @@ import pune from '../images/ramdham.jpg';
 import aurangabad from '../images/Ajanta.jpg';
 import astavinayak from '../images/ashtavinayak.jpg';
 import shanisingapur from '../images/Shani.jpg';
-
+import Shirdi from "../images/shirdi.jpg"; // Correct import
 
 function RouteDetails() {
   const { id } = useParams();
@@ -49,11 +49,7 @@ function RouteDetails() {
     2: {
       name: 'Nagpur to Shirdi',
       cards: [
-        { name: 'Sai Baba Temple', imageUrl: 'https://via.placeholder.com/150' },
-        { name: 'Dwarkamai', imageUrl: 'https://via.placeholder.com/150' },
-        { name: 'Shani Shingnapur', imageUrl: 'https://via.placeholder.com/150' },
-        { name: 'Sai Heritage Village', imageUrl: 'https://via.placeholder.com/150' },
-        { name: 'Khandoba Temple', imageUrl: 'https://via.placeholder.com/150' },
+        { name: 'Sai Baba Temple', imageUrl: Shirdi },
       ],
     },
     3: {
@@ -89,14 +85,12 @@ function RouteDetails() {
       name: 'Nagpur to Shegaon',
       cards: [
         { name: 'Gajanan Maharaj Temple', imageUrl: shegaon },
-        
       ],
     },
     7: {
       name: 'Nagpur to Pune',
       cards: [
         { name: 'Shaniwar Wada', imageUrl: pune },
-     
       ],
     },
     8: {
@@ -109,14 +103,12 @@ function RouteDetails() {
       name: 'Nagpur to Astavinayak',
       cards: [
         { name: 'Mayureshwar Temple', imageUrl: astavinayak },
-       
       ],
     },
     10: {
-      name: 'Nagpur to shanisingapur ',
+      name: 'Nagpur to Shanisingapur',
       cards: [
         { name: 'Shani Temple', imageUrl: shanisingapur },
-        
       ],
     },
   };
@@ -127,6 +119,15 @@ function RouteDetails() {
     return <h1>Route not found!</h1>;
   }
 
+  // Function to handle WhatsApp redirection
+  const handleBookNow = (placeName) => {
+    const phoneNumber = "8097539306"; // Replace with your WhatsApp number
+    const message = `Hello, I want to book a trip to ${placeName}. Please provide details.`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    
+    window.open(whatsappUrl, "_blank"); // Open in a new tab
+  };
+
   return (
     <div className="route-details">
       <h1>{route.name}</h1>
@@ -135,7 +136,12 @@ function RouteDetails() {
           <div key={index} className="route-card">
             <img src={card.imageUrl} alt={card.name} className="route-image" />
             <h3>{card.name}</h3>
-            <button className="book-now-button">Book Now</button>
+            <button 
+              className="book-now-button"
+              onClick={() => handleBookNow(card.name)}
+            >
+              Book Now
+            </button>
           </div>
         ))}
       </div>
